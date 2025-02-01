@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Include Bootstrap for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="load()">
-    <div id="calculator">
-        <!-- Screen and clear key -->
-        <div class="top">
-            <span id="clear">C</span>
-            <div id="screen"></div>
-        </div>
-
-        <div class="keys">
-            <!-- operators and other keys -->
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-            <span class="operator">+</span>
-            <span>4</span>
-            <span>5</span>
-            <span>6</span>
-            <span class="operator">-</span>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span class="operator">÷</span>
-            <span>0</span>
-            <span>.</span>
-            <span class="eval">=</span>
-            <span class="operator">x</span>
+<body>
+    <div class="container mt-5">
+        <div class="calculator p-3 rounded">
+            <!-- Dark mode toggle button -->
+            <button id="dark-mode-toggle" class="btn btn-secondary mb-3">Toggle Dark Mode</button>
+            
+            <!-- Display area -->
+            <div id="display" class="display p-2 mb-3 text-right">0</div>
+            
+            <!-- Button container -->
+            <div class="button-container">
+                <div class="row">
+                    <button class="btn btn-light col" id="AC">AC</button>
+                    <button class="btn btn-light col" id="clearLast">CL</button>
+                    <button class="btn btn-light col" id="divide">/</button>
+                    <button class="btn btn-light col" id="multiply">*</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-light col" id="7">7</button>
+                    <button class="btn btn-light col" id="8">8</button>
+                    <button class="btn btn-light col" id="9">9</button>
+                    <button class="btn btn-light col" id="subtract">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-light col" id="4">4</button>
+                    <button class="btn btn-light col" id="5">5</button>
+                    <button class="btn btn-light col" id="6">6</button>
+                    <button class="btn btn-light col" id="add">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-light col" id="1">1</button>
+                    <button class="btn btn-light col" id="2">2</button>
+                    <button class="btn btn-light col" id="3">3</button>
+                    <button class="btn btn-light col" id="equal">=</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-light col" id="0">0</button>
+                    <button class="btn btn-light col" id="dot">.</button>
+                    <button class="btn btn-light col" id="square">^2</button>
+                    <button class="btn btn-light col" id="modulus">%</button>
+                </div>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
